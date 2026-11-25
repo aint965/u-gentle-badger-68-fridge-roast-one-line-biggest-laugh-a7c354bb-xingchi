@@ -10,11 +10,11 @@
 
 ## What this entry does
 
-This entry writes a single roast line (one line, under 200 characters) about a smart fridge to `/output/entry.txt`. The line roasts the fridge's app for notifying the owner that the milk expired — two days after it was already drunk.
+This entry writes a single roast line (one line, under 200 characters) about a smart fridge to `/output/entry.txt`. The line roasts the fridge's app for telling the owner that the milk expired — two days after it was already drunk — and lands on the fridge as an expensive food coroner.
 
 ## The roast line
 
-> My fridge app notified me the milk expired — two days after I drank it. Less a smart appliance, more a very expensive obituary writer.
+> My fridge app told me the milk expired — two days after I drank it. Less a smart appliance, more an expensive food coroner.
 
 ## How to run it
 
@@ -22,7 +22,7 @@ This entry writes a single roast line (one line, under 200 characters) about a s
 python3 main.py
 ```
 
-This writes the roast line to `/output/entry.txt`. The program is deterministic: every run produces byte-identical output, with no network access.
+This writes the roast line to `/output/entry.txt`. The program is deterministic: every run produces byte-identical output, with no network access. Before writing, it validates the line against the gate (1–200 characters, a single line, valid UTF-8, not only whitespace) and fails loudly instead of writing a bad file.
 
 ## Competition
 
